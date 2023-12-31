@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_main"
+        />
+
+
+ <com.google.android.material.bottomappbar.BottomAppBar
+     android:id="@+id/bottomAppBarMain"
+     android:layout_gravity="bottom"
+android:background="@color/white"
+    app:fabAnimationMode="scale"
+     app:fabCradleMargin="@dimen/_10mdp"
+     app:fabCradleVerticalOffset="@dimen/_10mdp"
+     app:fabCradleRoundedCornerRadius="@dimen/_15mdp"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+
+     <com.google.android.material.bottomnavigation.BottomNavigationView
+         android:id="@+id/bottomNavMain"
+app:menu="@menu/menu_main"
+         app:itemTextColor="@color/color_main_menu"
+         app:itemIconTint="@color/color_main_menu"
+         app:labelVisibilityMode="selected"
+
+
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>
+
+
+
+
+
+
+ </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:id="@+id/btnFabMainMenu"
+        app:layout_anchor="@id/bottomAppBarMain"
+
+        app:backgroundTint="@color/jacarta"
+        android:src="@drawable/ic_restaurant"
+        app:tint="@color/white"
+
+
+        android:contentDescription="@string/app_name" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
